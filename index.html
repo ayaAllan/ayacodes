@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+	<title>Aya Abu Allan</title>
+</head>
+<body>
+<div class="container-fluid">
+	
+<!--=============================== WELCOME SECTION ============================-->
+	<section id="welcome"> 
+		<div class="vidbox">
+			<video autoplay loop muted>
+				<source src="img/Tourists.mp4" type="video/mp4">
+			</video>
+			<div class="welcome">
+				<h1>Aya Abu Allan</h1>
+				<p>Welcome to my personal portfolio. I'm a fresh grad looking for new opportunities. 
+				Enjoy your stay :)
+				</p>
+			</div>	
+		</div>
+	</section>
+<!--=============================== SKILLS SECTION ============================-->
+	<section id="skills" >
+		<!-- <h2 >Skills</h2> -->
+		<div class="row" style="margin: 0;">
+			<div class="col-lg-4 col-md-4 col-sm-6" style="padding:10px;">
+				<div class="card bg-light full-card h-100" >
+				   <h5 class="card-header">Programming + scripting languages</h5>
+				   <div class="card-body main-card">
+					<ul>
+						<li>Java</li> 
+						<li>Python</li>
+						<li>C</li>
+						<li>JavaScript</li>
+						<li>NodeJS</li>
+						<li>HTML + CSS</li>
+						<li>MATLAB</li>
+						<li>UNIX Shell</li>
+					 </ul>
+				   </div>
+				</div>
+			 </div>
+			 <div class="col-lg-4 col-md-4 col-sm-6" style="padding:10px;">
+				<div class="card  bg-light full-card h-100" >
+				   <h5 class="card-header">Tools + IDEs</h5>
+				   <div class="card-body main-card h-100" >
+					<ul>
+						<li>Agile</li> 
+						<li>Git</li>
+						<li>RESTful APIs</li>
+						<li>AJAX</li>
+						<li>JSON</li>
+						<li>Rodin Event-B</li>
+						<li>TLA</li>
+						<li>PVS</li>
+						<li>JPF</li> 
+						<li>SQL</li>
+						<li>PostgreSQL</li>
+						<li>Windows</li>
+						<li>UNIX</li>
+						<li>Linux</li>
+						<li>Nmap</li>
+						<li>Eclipse</li>
+						<li>Virtual Box</li>
+						<li>Bootstrap</li>
+						<li>EiffelStudio</li>
+						<li>Wireshark</li>
+						<li>Docker</li>
+						<li>SDLC</li>
+					 </ul>
+				   </div>
+				</div>
+			 </div>
+			 <div class="col-lg-4 col-md-4 col-sm-6" style="padding: 10px;">
+				<div class="card bg-light full-card h-100">
+				   <h5 class="card-header">Relevant Coursework</h5>
+				   <div class="card-body main-card" >
+					<ul>
+						<li>Design and Analysis of Algorithms</li> 
+						<li>Fundamentals of Data Structures</li>
+						<li>Software Design</li>
+						<li>Advanced Object-Oriented Programming</li>
+						<li>System Specification & Refinement</li>
+						<li>Introduction to Databases</li>
+						<li>Building E-Commerce Systems</li>
+						<li>Software Engineering Testing</li>
+						<li>Mission-Critical Systems</li>
+						<li>Operating System Fundamentals</li>
+						<li>Discrete Mathematics</li>
+					 </ul>
+				   </div>
+				</div>
+			 </div>
+		</div>
+	</section>
+<!--=============================== PROJECTS SECTION ============================-->
+	<!-- <section id="projects">
+		<h2>Projects</h2>
+	</section> -->
+<!--=============================== CONTACT SECTION ============================-->
+	<section id="contact">
+		<h2 style="text-align: center;">GET IN TOUCH</h2>
+		<div class="px-auto mx-auto col-md-6">
+			<form id="contact-form">
+				<div class="row">
+					<div class="form-group col-md-6">
+						<label for="nameInput">Name</label>
+						<input type="text" class="form-control inp" name="username" id="username" placeholder="Will Smith">
+					</div>
+
+					<div class="form-group col-md-6">
+						<label for="nameEmail">Email</label>
+						<input type="email" class="form-control inp" name="useremail" id="useremail" placeholder="wsmith@example.com">
+						<small id="emailHelp" class="form-text text-muted">Your email will not be shared.</small>
+					</div>
+				</div> 
+
+				<div>
+					<div class="form-group">
+					    <label for="message">Message</label>
+					    <textarea class="txtinp form-control" id="message" name="message" rows="3"></textarea>
+					</div>
+				</div>
+				<input type="submit" value="Submit" class="btn btn-primary">
+			</form>
+		</div>
+	</section>
+
+</div>
+
+	<!-- emailJS -->
+	<script type="text/javascript" src="js/script.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
+	<script type="text/javascript">
+        (function(){
+           emailjs.init('user_cBTDAlgvKVTr4K4eewhtj');
+        })();
+    </script>
+
+    <script type="text/javascript">
+  //   	window.onload = function() {
+		//     if(!window.location.hash) {
+		//         window.location = window.location + '#loaded';
+		//         window.location.reload();
+		//     }
+		// }
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                emailjs.sendForm('aya', 'template_7gmx8hm', this);
+            });
+        }
+    </script>
+
+<!-- 	<script>
+		var templateParams = {
+			user_name: document.getElementById('username').value,
+			user_email: document.getElementById('useremail').value,
+			to_name: "aya",
+			message: document.getElementById('message').value
+		};
+	 
+		function sending() {
+			emailjs.send('aya', 'template_7gmx8hm', templateParams) 
+	    .then(function(response) {
+	       console.log('SUCCESS!', response.status, response.text);
+	    }, function(error) {
+	       console.log('FAILED...', error);
+	    }); 
+		}
+	</script> -->
+
+
+	<!-- Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>
